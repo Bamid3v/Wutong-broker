@@ -58,7 +58,7 @@ export default Stats;
 const StatsBox = ({ num, title, numColor, desc, grad }) => {
   return (
     <div
-      className={`bg-gradient-to-t ${grad[0]} ${grad[1]} rounded-2xl border border-line`}
+      className={`bg-gradient-to-t ${grad[0]} ${grad[1]} rounded-2xl slideIn border border-line`}
     >
       <div className="flexCenter flex-col statbox gap-[30px] px-5 md:px-10 py-14 md:py-20">
         <div className="gap-2 flexCenter flex-col ">
