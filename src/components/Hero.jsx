@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="py-14 md:pt-[120px] md:pb-[200px] bg-hero-pattern">
       {/* <Meteors number={30} /> */}
-      <div className="flexCenter flex-col gap-8 divanimate">
+      <div className="flexCenter flex-col gap-8 ">
         <div className="flexCenter flex-col gap-4">
           <h2 className="text-[36px] md:text-[64px] max-w-full md:max-w-[50rem] px-3 md:px-0 font-neuemon font-medium hero-head text-center leading-tight tracking-normal">
             Sell your <span>gift cards</span> at the <span>best rate</span> with

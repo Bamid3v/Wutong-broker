@@ -60,8 +60,8 @@ const Faq = () => {
           before and here are the answers
         </p>
       </div>
-      <div className="flex flex-col gap-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="flex flex-col gap-20 relative">
+        <div className="grid grid-cols-1 relative md:grid-cols-2 lg:grid-cols-3 gap-6">
           {FaqData.map((data) => (
             <EachFaq
               key={data.question}

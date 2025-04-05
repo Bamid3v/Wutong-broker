@@ -27,8 +27,8 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flexCenter gap-4">
-            <Button text="Sign in" pad />
-            <Button text="Sign up" grad pad />
+            <Button text="Sign in" href='/signIn' pad />
+            <Button text="Sign up" href='/signUp' grad pad />
           </div>
         </div>
         <img

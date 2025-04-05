@@ -149,7 +149,7 @@ html {
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(-500px)
+    transform: translateY(500px)
   }
 
   60% {
@@ -163,6 +163,9 @@ html {
 }
 
 @layer utilities {
+  .input{
+    @apply px-[15px] py-[11px] text-[12px] max-w-[388px] rounded-[8px] text-white/85 bg-[#3f3f3f] focus:outline-none focus:border-none focus:ring-0  placeholder:text-white/55;
+  }
   .para {
     @apply font-monasan font-normal text-base tracking-tight;
   }
