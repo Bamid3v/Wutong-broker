@@ -3,15 +3,25 @@ import { Link } from "react-router-dom";
 
 const AuthPage = ({ type }) => {
   return (
-    <main className="bg-hero-pattern">
+    <main className="bg-hero-pattern font-neuemon">
       <section className=" h-dvh w-full flexCenter">
-        <div className="bg-[#000000] text-white flexCenter gap-24 p-3 rounded-[20px]">
+        <div className="bg-[#000000]/90 text-white flexCenter gap-32 p-3 rounded-[20px]">
           <div className="w-[420px] ">
-            <img
+           {
+            type === "signIn" ? (
+              <img
+              src="/images/auth1.PNG"
+              alt=""
+              className="object-cover rounded-[12px]"
+            />
+            ):(
+              <img
               src="/images/auth-image.jpg"
               alt=""
               className="object-cover rounded-[12px]"
             />
+            )
+           }
           </div>
           <div className="flex flex-col gap-8 w-[550px]">
             <div className="flex flex-col gap-4">
@@ -27,10 +37,10 @@ const AuthPage = ({ type }) => {
               </p>
             </div>
 
-            <form className="flex flex-col gap-8 max-w-[388px]">
+            <form className="flex flex-col gap-8 max-w-[400px]">
               {type === "signUp" && (
                 <div className="flex flex-col gap-[10px]">
-                  <label htmlFor="email" className="text-sm font-thin">
+                  <label htmlFor="email" className="text-sm font-monasan font-thin">
                     Full name*
                   </label>
                   <input
@@ -43,7 +53,7 @@ const AuthPage = ({ type }) => {
               )}
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-sm font-thin ">
+                <label htmlFor="email" className="text-sm font-monasan font-thin ">
                   Email
                 </label>
                 <input
@@ -55,9 +65,9 @@ const AuthPage = ({ type }) => {
               </div>
 
               {type === "signUp" ? (
-                <div className="flex justify-stretch items-start gap-2 w-[388px]">
+                <div className="flex justify-stretch items-start gap-2 w-[400px]">
                   <div className="flex flex-col gap-2 w-full">
-                    <label htmlFor="password" className="text-sm font-thin">
+                    <label htmlFor="password" className="text-sm font-monasan font-thin">
                       Password
                     </label>
                     <input
@@ -70,7 +80,7 @@ const AuthPage = ({ type }) => {
                   <div className="flex flex-col gap-2 w-full">
                     <label
                       htmlFor="confirmPassword"
-                      className="text-sm font-thin"
+                      className="text-sm font-monasan font-thin"
                     >
                       Confirm Password
                     </label>
@@ -84,7 +94,7 @@ const AuthPage = ({ type }) => {
                 </div>
               ) : (
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="password" className="text-sm font-thin">
+                  <label htmlFor="password" className="text-sm font-monasan font-thin">
                     Password
                   </label>
                   <input
