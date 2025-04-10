@@ -6,22 +6,20 @@ const AuthPage = ({ type }) => {
     <main className="bg-hero-pattern font-neuemon">
       <section className=" h-dvh w-full flexCenter">
         <div className="bg-[#000000]/90 text-white flexCenter gap-32 p-3 rounded-[20px]">
-          <div className="w-[420px] ">
-           {
-            type === "signIn" ? (
+          <div className="w-[420px] hidden lg:block">
+            {type === "signIn" ? (
               <img
-              src="/images/auth1.PNG"
-              alt=""
-              className="object-cover rounded-[12px]"
-            />
-            ):(
+                src="/images/auth1.PNG"
+                alt=""
+                className="object-cover rounded-[12px]"
+              />
+            ) : (
               <img
-              src="/images/auth-image.jpg"
-              alt=""
-              className="object-cover rounded-[12px]"
-            />
-            )
-           }
+                src="/images/auth-image.jpg"
+                alt=""
+                className="object-cover rounded-[12px]"
+              />
+            )}
           </div>
           <div className="flex flex-col gap-8 w-[550px]">
             <div className="flex flex-col gap-4">
@@ -37,10 +35,19 @@ const AuthPage = ({ type }) => {
               </p>
             </div>
 
-            <form className="flex flex-col gap-8 max-w-[400px]">
+            <form
+              className="flex flex-col gap-8 max-w-[400px]"
+              onSubmit={(e) => {
+                e.preventDefault();
+                console.log("Form submitted!");
+              }}
+            >
               {type === "signUp" && (
                 <div className="flex flex-col gap-[10px]">
-                  <label htmlFor="email" className="text-sm font-monasan font-thin">
+                  <label
+                    htmlFor="email"
+                    className="text-sm font-monasan font-thin"
+                  >
                     Full name*
                   </label>
                   <input
@@ -53,7 +60,10 @@ const AuthPage = ({ type }) => {
               )}
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-sm font-monasan font-thin ">
+                <label
+                  htmlFor="email"
+                  className="text-sm font-monasan font-thin "
+                >
                   Email
                 </label>
                 <input
@@ -67,7 +77,10 @@ const AuthPage = ({ type }) => {
               {type === "signUp" ? (
                 <div className="flex justify-stretch items-start gap-2 w-[400px]">
                   <div className="flex flex-col gap-2 w-full">
-                    <label htmlFor="password" className="text-sm font-monasan font-thin">
+                    <label
+                      htmlFor="password"
+                      className="text-sm font-monasan font-thin"
+                    >
                       Password
                     </label>
                     <input
@@ -94,7 +107,10 @@ const AuthPage = ({ type }) => {
                 </div>
               ) : (
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="password" className="text-sm font-monasan font-thin">
+                  <label
+                    htmlFor="password"
+                    className="text-sm font-monasan font-thin"
+                  >
                     Password
                   </label>
                   <input
@@ -105,12 +121,14 @@ const AuthPage = ({ type }) => {
                   />
                 </div>
               )}
-              <button
-                type="submit"
-                className="bg-green text-white  px-[15px] py-[11px] text-base rounded-[10px] font-monasan font-medium "
-              >
-                {type === "signIn" ? "Sign in" : "Create account"}
-              </button>
+              <Link to='/dashboard' className="w-full">
+                <button
+                  type="submit"
+                  className="bg-green text-white w-full px-[15px] py-[11px] text-base rounded-[10px] font-monasan font-medium"
+                >
+                  {type === "signIn" ? "Sign in" : "Create account"}
+                </button>
+              </Link>
             </form>
 
             <p className="text-sm text-white/50 max-w-[450px]">
@@ -128,7 +146,8 @@ const AuthPage = ({ type }) => {
             {type === "signUp" && (
               <p className="text-sm text-white/50 max-w-[400px]">
                 By creating an account you agree to our
-                <Link to='/'> terms of services</Link> and <Link to='/'>privacy policy</Link>
+                <Link to="/"> terms of services</Link> and{" "}
+                <Link to="/">privacy policy</Link>
               </p>
             )}
           </div>

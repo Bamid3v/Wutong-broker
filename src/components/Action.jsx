@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Action = () => {
   return (
     <section
@@ -14,11 +16,13 @@ const Action = () => {
             a convenient solution that maximizes the value of your assets.
           </p>
         </div>
-        <div
-          className={`text-base tracking-tight cursor-pointer font-monasan font-medium border rounded-[10px] border-line px-6 py-3 text-white bg-white bg-opacity-20`}
-        >
-          Create account
-        </div>
+        <Link to='/signUp'>
+          <div
+            className={`text-base tracking-tight cursor-pointer font-monasan font-medium border rounded-[10px] border-line px-6 py-3 text-white bg-white bg-opacity-20`}
+          >
+            Create account
+          </div>
+        </Link>
       </div>
     </section>
   );

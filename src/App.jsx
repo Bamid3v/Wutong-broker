@@ -3,6 +3,7 @@ import "./index.css";
 import Home from './pages/Home';
 import AuthPage from './pages/AuthPage';
 import NotFound from './pages/NotFound';
+import Dashboard from './pages/Dashboard';
 
 const App = () => {
   return (
@@ -17,11 +18,11 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signIn" element={<AuthPage type='signIn' />} />
         <Route path="/signUp" element={<AuthPage type='signUp' />} />
-{/* 
-        <Route element={<ProtectedRoute isAllowed={!!currentUser} />}>
+
+        {/* <Route element={<ProtectedRoute isAllowed={!!currentUser} />}> */}
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
-      </Route> */}
+        {/* <Route path="/profile" element={<Profile />} /> */}
+      {/* </Route> */}
 
         {/* <Route path="/users" element={<Users />} /> */}
         <Route path="*" element={<NotFound />} /> {/* 404 route */}

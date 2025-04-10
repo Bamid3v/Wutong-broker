@@ -16,8 +16,8 @@ const Hero = () => {
           </p>
         </div>
         <div className="flexCenter gap-4">
-          <Button text="Create account" grad pad />
-          <Button text="Sign In" pad />
+          <Button text="Create account" href='/signUp' grad pad />
+          <Button text="Sign In" href='/signIn' pad />
         </div>
       </div>
     </section>
